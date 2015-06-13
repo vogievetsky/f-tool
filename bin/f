@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+var argv = process.argv;
+if (argv.length <= 2) {
+  console.log('Must have a function');
+  process.exit(0);
+}
+
+try {
+  var fn = new Function('l', 'n', 'return ' + argv[2]);
+} catch (e) {
+  console.log(e.message);
+  process.exit(0);
+}
+
+var split = require('split');
+
+process.stdin
+  .pipe(split())
+  .on('data', function(line) {
+    var value = fn(line, Number(line));
+    if (typeof value === 'undefined') return;
+    console.log(value);
+  })

@@ -1,0 +1,17 @@
+{
+  "name": "f-tool",
+  "version": "0.1.0",
+  "description": "A small set of command line tools",
+  "bin": {
+    "facet": "bin/f"
+  },
+  "keywords": [
+    "f",
+    "tools"
+  ],
+  "author": "Vadim Ogievetsky",
+  "license": "MIT",
+  "dependencies": {
+    "split": "^1.0.0"
+  }
+}
