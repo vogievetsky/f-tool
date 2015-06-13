@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "A small set of command line tools",
   "bin": {
-    "facet": "bin/f"
+    "f": "bin/f"
   },
   "keywords": [
     "f",
